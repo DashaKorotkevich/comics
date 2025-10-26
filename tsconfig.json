@@ -1,6 +1,44 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@constants/*": [
+        "src/shared/constants/*"
+      ],
+      "@constants": [
+        "src/shared/constants"
+      ],
+      "@navigation/*": [
+        "src/providers/navigation/*"
+      ],
+      "@hooks/*": [
+        "src/shared/hooks/*"
+      ],
+      "@utils/*": [
+        "src/shared/utils/*"
+      ],
+      "@utils": [
+        "src/shared/ui"
+      ],
+      "@ui/*": [
+        "src/shared/ui/*"
+      ],
+      "@ui": [
+        "src/shared/utils"
+      ],
+      "@screens/*": [
+        "src/screens/*"
+      ],
+      "@store": [
+        "src/store"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
+
